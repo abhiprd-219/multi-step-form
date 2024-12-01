@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summary</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 min-h-screen flex items-center justify-center p-4">
+
+  <!-- Desktop Section -->
+  <div class="hidden lg:flex bg-white w-4/5 h-3/4 rounded-lg shadow-lg">
+    <!-- Sidebar for Desktop -->
+    <div
+      class="text-white p-6 flex flex-col gap-8 lg:w-1/4 bg-no-repeat bg-cover bg-center bg-[url('../assets/images/bg-sidebar-desktop.svg')] m-2.5 rounded-lg">
+      <h2 class="text-lg uppercase font-semibold tracking-wide">Steps</h2>
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-blue-600 font-semibold">
+            1
+          </div>
+          <p class="text-sm uppercase font-medium">Your Info</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-white">
+            2
+          </div>
+          <p class="text-sm uppercase font-medium">Select Plan</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-white">
+            3
+          </div>
+          <p class="text-sm uppercase font-medium">Add-ons</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-white">
+            4
+          </div>
+          <p class="text-sm uppercase font-medium">Summary</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary Section for Desktop -->
+    <div class="w-2/3 p-8">
+      <h2 class="text-3xl font-bold text-gray-800">Finishing up</h2>
+      <p class="text-gray-500 mt-2">Double-check everything looks OK before confirming.</p>
+
+      <!-- Plan Summary -->
+      <div class="mt-8 bg-gray-50 p-6 rounded-lg">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h3 class="font-semibold text-lg">Arcade (Yearly)</h3>
+            <a href="./plan.html">
+              <button class="text-blue-600 hover:underline text-sm">Change</button>
+            </a>
+          </div>
+          <p id="arcadePrice" class="font-bold text-gray-800 text-lg">$90/yr</p>
+        </div>
+    
+        <hr class="border-gray-300">
+    
+        <div class="mt-6">
+          <div class="flex justify-between items-center">
+            <p id="onlineServiceText" class="text-gray-500">Online service</p>
+            <p id="onlineServicePrice" class="text-gray-800">+$10/yr</p>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <p id="largerStorageText" class="text-gray-500">Larger storage</p>
+            <p id="largerStoragePrice" class="text-gray-800">+$20/yr</p>
+          </div>
+        </div>
+    
+        <hr class="border-gray-300 my-6">
+    
+        <div class="flex justify-between items-center">
+          <p class="font-semibold text-lg text-gray-500">Total (per year)</p>
+          <p id="totalPrice" class="font-bold text-2xl text-blue-600">$120/yr</p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="flex justify-between mt-8">
+        <button class="text-gray-500 font-medium hover:underline">Go Back</button>
+        <button class="bg-blue-600 text-white py-2 px-8 rounded-md shadow hover:bg-blue-700 focus:ring focus:ring-blue-500">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- Mobile Section -->
+    <div class="bg-blue-100 w-full overflow-hidden sm:flex lg:hidden flex-col h-[100vh]">
+        <!-- Sidebar for Mobile -->
+        <div
+          class="text-white mt-0 p-6 flex flex-col gap-8 bg-no-repeat bg-cover bg-center bg-[url('../assets/images/bg-sidebar-mobile.svg')] h-[30vh]">
+          <div class="flex flex-row justify-center items-start gap-10 h-full">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-blue-600 font-semibold">
+                1
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-white">
+                2
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12  flex items-center justify-center rounded-full border-2 border-white">
+                3
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12  flex items-center justify-center rounded-full border-2 border-white">
+                4
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    <!-- Summary Section for Mobile -->
+    <div class="relative -mt-8 mx-auto w-11/12 max-w-md bg-white rounded-lg shadow-lg p-6 z-10">
+      <h2 class="text-2xl font-bold text-gray-800">Finishing up</h2>
+      <p class="text-gray-500 mt-2">Double-check everything looks OK before confirming.</p>
+
+      <!-- Plan Summary -->
+      <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+        <div class="flex justify-between items-center mb-4">
+          <div>
+            <h3 class="font-semibold text-lg">Arcade (Yearly)</h3>
+           <a href = "./plan.html"> <button class="text-blue-600 hover:underline text-sm">Change</button></a>
+          </div>
+          <p class="font-bold text-gray-800">$90/yr</p>
+        </div>
+
+        <hr class="border-gray-300">
+
+        <div class="mt-4">
+          <div class="flex justify-between items-center">
+            <p class="text-gray-500">Online service</p>
+            <p class="text-gray-800">+$10/yr</p>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-gray-500">Larger storage</p>
+            <p class="text-gray-800">+$20/yr</p>
+          </div>
+        </div>
+
+        <hr class="border-gray-300 my-4">
+
+        <div class="flex justify-between items-center">
+          <p class="font-semibold text-lg text-gray-500">Total (per year)</p>
+          <p class="font-bold text-xl text-blue-600">$120/yr</p>
+        </div>
+      </div>
+</div>
+     
+   
+    <!-- Navigation Buttons -->
+    <div class=" fixed bottom-0 left-0 right-0  bg-white flex justify-between items-center p-2">
+        
+        <a href="./index.html" class="text-gray-500 font-medium hover:underline">Go Back</a>
+        <a href="./pickOn.html" class="bg-blue-600 text-white py-2 px-6 rounded-md shadow hover:bg-blue-700 focus:ring focus:ring-blue-500">Next Step</a>
+      
+    </div>
+ 
+  </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Retrieve the selected add-ons from localStorage and parse them as JSON
+      const selectedAddOns = JSON.parse(localStorage.getItem('selectedAddOns')) || [];
+    
+      // Select the elements that will display the add-on information
+      const onlineServicePrice = document.getElementById('onlineServicePrice');
+      const largerStoragePrice = document.getElementById('largerStoragePrice');
+      const totalPriceElement = document.getElementById('totalPrice');
+      const arcadePriceElement = document.getElementById('arcadePrice');
+    
+      // Base price for the Arcade plan
+      let totalPrice = 909; // Starting base price for Arcade plan
+    
+      // Check if add-ons are selected and update the UI
+      selectedAddOns.forEach(addOn => {
+        // Convert price to integer if it's a string
+        const price = parseInt(addOn.price, 10);
+        if (isNaN(price)) {
+          console.error(`Invalid price for ${addOn.name}`);
+          return;
+        }
+    
+        if (addOn.name === 'Online service') {
+          onlineServicePrice.textContent = `+$${price}/yr`;
+          totalPrice += price;
+        }
+        if (addOn.name === 'Larger storage') {
+          largerStoragePrice.textContent = `+$${price}/yr`;
+          totalPrice += price;
+        }
+        if (addOn.name === 'Customizable Profile') {
+          largerStoragePrice.textContent = `+$${price}/yr`;
+          totalPrice += price;
+        }
+      });
+    
+      // Update the total price
+      totalPriceElement.textContent = `$${totalPrice}/yr`;
+    
+      // Optionally, log the selected add-ons for debugging
+      console.log('Selected Add-Ons:', selectedAddOns);
+    });
+  </script>
+  
+</html>

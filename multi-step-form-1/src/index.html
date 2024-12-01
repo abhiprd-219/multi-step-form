@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multistep Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet" />
+</head>
+<body class="md:bg-blue-200 md:py-[105px] md:pl-[20%] md:pr-[20%] md:h-[80vh] font">
+  <div class=" relative bg-slate-300 flex flex-col items-center md:flex md:flex-row  md:bg-white md:h-[78vh] md:box-border min-h-screen md:min-h-[unset] md:p-2 md:rounded-md md:gap-10 bg-contain">
+    <div class="hidden md:block md:w-[350px] md:h-[75vh]   bg-center md:rounded-lg "
+     style="background-image: url('./assets/images/bg-sidebar-desktop.svg'); background-size: cover; background-position: center;">
+</div>
+ <div class="w-full md:hidden">
+      <img src="./assets/images/bg-sidebar-mobile.svg" alt="img" class="w-full object-cover" />
+    </div>
+    <div class="flex gap-4 absolute top-0 transparent text-center md:flex md:flex-col items-start">
+      <div class="box md:flex md:gap-5 ">
+        <div class="box1 pt-4 rounded-full h-[30px] w-[30px] border bg-white text-black p-4 flex flex-col justify-center items-center md:flex md:flex-row">
+          <p class="para1">1</p>
+        </div>
+        <div class="content hidden md:flex md:flex-col items-start text-start">
+          <div class="step md:text-white">Step 1</div>
+          <div class="detail md:text-white font-bold">YOUR INFO</div>
+        </div>
+      </div>
+      <div class="box md:flex md:gap-5 ">
+        <div
+          class="box2 rounded-full h-[30px] w-[30px] bg-transparent text-white border p-4 flex flex-col justify-center items-center md:flex md:flex-row">
+          <p class="para2">2</p>
+        </div>
+        <div class="content hidden md:flex md:flex-col items-start text-start">
+          <div class="step md:text-white">Step 2</div>
+          <div class="detail md:text-white font-bold">SELECT PLAN</div>
+        </div>
+      </div>
+      <div class="box md:flex md:gap-5">
+        <div
+          class="box3 rounded-full h-[30px] w-[30px] bg-transparent text-white border p-4 flex flex-col justify-center items-center md:flex md:flex-row">
+          <p class="para3">3</p>
+        </div>
+        <div class="content hidden md:flex md:flex-col items-start text-start">
+          <div class="step md:text-white">Step 3</div>
+          <div class="detail md:text-white font-bold">ADD-0NS</div>
+        </div>
+      </div>
+      <div class="box md:flex md:gap-5">
+        <div
+          class="box4 rounded-full h-[30px] w-[30px] bg-transparent text-white border p-4 flex flex-col justify-center items-center md:flex md:flex-row">
+          <p class="para4">4</p>
+        </div>
+        <div class="content hidden md:flex md:flex-col items-start text-start">
+          <div class="step md:text-white">Step 4</div>
+          <div class="detail md:text-white font-bold">SUMMARY</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-[90%] bg-white max-h-[80vh]  p-10 relative z-10 rounded-lg shadow-lg top-0 right-0 bg-cover bg-cente md:shadow-none md:text-lg space-y-5 md:h-[75vh] mt-[-20%]  md:w-[50vw] md:p-3 md:mt-[-5px]">
+      <form>
+        <!-- step1 -->
+        <div class="step1">
+          <p class="text-2xl font-bold p-0 md:p-0 text-blue-950  mb-[5px]">
+            Personal Info
+          </p>
+          <p class="text-gray-700 p-2 md:p-0">
+            Please provide your name, email address, and phone number.
+          </p>
+          <div class="name p-2">
+            <div class="flex justify-between">
+              <p class="">Name</p>
+              <p class="text-md text-rose-900 hidden" id="err1">
+                this field is required
+              </p>
+            </div>
+            <input id="name" type="text" placeholder="e.g. Mr Stark"
+              class="border p-2 w-full mt-1 rounded-md focus:outline-blue-800" />
+          </div>
+          <div class="email p-2">
+            <div class="flex justify-between">
+              <p class="">Email Address</p>
+              <p class="text-md text-red-900 hidden" id="err2">
+                this field is required
+              </p>
+            </div>
+            <input id="mail" type="text" placeholder="e.g. abhi@gmail.com"
+              class="border p-2 w-full mt-1 rounded-md focus:outline-blue-800" />
+          </div>
+          <div class="mob p-2">
+            <div class="flex justify-between">
+              <p class="">Phone Number</p>
+              <p class="text-md text-red-900 hidden" id="err3">
+                this field is required
+              </p>
+            </div>
+            <input id="mob" type="text" placeholder="e.g. +919988774455"
+              class="border p-2 w-full mt-1 rounded-md focus:outline-blue-800" />
+          </div>
+        </div>
+
+        <!-- step2 -->
+        <div class="step2 hidden">
+          <p class="text-3xl font-bold p-2 text-blue-950 md:p-0 mb-[5px]">
+            Select your plan
+          </p>
+          <p class="text-gray-700 p-2 mb-7 md:p-0">
+            You have the option of monthly or yearly billing.
+          </p>
+          <div
+            class="flex flex-col md:flex-row md:justify-around md:items-center flex-wrap gap-2 md:flex  md:text-sm ">
+            <div
+              class="arcade h-[90px] md:w-[30%] w-[95%] border-[1px] p-4 border-gray-300 flex gap-3  rounded-3xl items-center md:h-[175px] md:flex md:flex-col md:justify-center md:items-center md:ml-[-25px] hover:border-blue-800 text-center md:p-0 "
+              id="arcade1">
+              <div class="arcade icon">
+                <img src="./assets/images/icon-arcade.svg" alt="img" class="arcade" />
+              </div>
+              <div class="details1 arcade md:flex md:flex-col md:justify-center">
+                <div class="name arcade text-blue-950 font-bold">Arcade</div>
+                <div class="price arcade" id="price1">$9/mo</div>
+                <div class="offfer arcade text-blue-950" id="offer1"></div>
+              </div>
+            </div>
+            <div
+              class="advanced h-[90px] md:w-[30%] w-[95%] border-[1px] p-4 border-gray-300 flex gap-4  rounded-3xl items-center md:h-[175px] md:flex md:flex-col md:justify-center md:items-center hover:border-blue-800 text-center md:p-0"
+              id="advanced1">
+              <div class="advanced icon">
+                <img src="./assets/images/icon-advanced.svg" alt="img" class="advanced" />
+              </div>
+              <div class="advanced details2 md:flex md:flex-col md:justify-center">
+                <div class="advanced name text-blue-950 font-bold">
+                  Advanced
+                </div>
+                <div class="advanced price" id="price2">$12/mo</div>
+                <div class="offfer advanced text-blue-950" id="offer2"></div>
+              </div>
+            </div>
+            <div
+              class="pro h-[90px] md:w-[30%] w-[95%] border-[1px] p-4 border-gray-300 flex gap-4  rounded-3xl items-center md:h-[175px] md:flex md:flex-col md:justify-center md:items-center hover:border-blue-800 text-center md:p-0"
+              id="pro1">
+              <div class="pro icon">
+                <img src="./assets/images/icon-pro.svg" alt="img" class="pro" />
+              </div>
+              <div class="details3 pro md:flex md:flex-col md:justify-center">
+                <div class="name pro text-blue-950 font-bold">Pro</div>
+                <div class="price pro" id="price3">$15/mo</div>
+                <div class="offfer pro text-blue-950" id="offer3"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="h-[50px] w-[95%] flex justify-center items-center gap-3 font-bold text-blue-950 bg-gray-100 rounded-xl mt-5">
+            <div class="monthly">Monthly</div>
+            <div class="btn">
+              <div class="togglebtn w-16 bg-blue-950 h-7 rounded-full relative flex items-center">
+                <div class="circle h-[25px] w-[25px] bg-white rounded-full relative"></div>
+              </div>
+            </div>
+            <div class="yearly">Yearly</div>
+          </div>
+        </div>
+
+        <!-- step3 -->
+        <div class="step3 hidden">
+          <p class="text-3xl font-bold p-2 md:p-0 text-blue-950  ">
+            Pick add-ons
+          </p>
+          <p class="text-gray-700 p-2 md:p-0 mb-7">
+            Add-ons help enhance your gaming experience.
+          </p>
+          <div id="original"
+            class="org h-[90px] w-[95%] border-[1px] p-4 border-gray-300 flex gap-4 mb-5 rounded-lg items-center md:h-[100px] md:w-full hover:border-blue-800 text-sm">
+            <input type="checkbox" name="" id="" class="org h-[25px] w-[25px]" id="checkbox1" />
+            <!-- <div class="org check">
+            </div> -->
+            <div class="org opt">
+              <div class="org name text-blue-950 font-bold" id="orgname">
+                Online service
+              </div>
+              <div class="org desc">Access to multiplayer games</div>
+            </div>
+            <div class="org price text-blue-950" id="serviceprice">
+              +$1/mo
+            </div>
+          </div>
+          <div id="storage"
+            class="str h-[90px] w-[95%] border-[1px] p-4 border-gray-300 flex gap-4 mb-5 rounded-lg items-center md:h-[100px] md:w-full hover:border-blue-800 text-sm">
+            <input type="checkbox" name="" id="" class="str h-[25px] w-[25px]" id="checkbox2" />
+            <!-- <div class=" str check">
+            </div> -->
+            <div class="str opt">
+              <div class="str name text-blue-950 font-bold" id="strname">
+                Large storage
+              </div>
+              <div class="str desc">Access to multiplayer games</div>
+            </div>
+            <div class="str price text-blue-950" id="storageprice">
+              +$2/mo
+            </div>
+          </div>
+          <div id="profile"
+            class="prof h-[90px] w-[95%] border-[1px] p-4 border-gray-300 flex gap-4  rounded-lg items-center md:h-[100px] md:w-full hover:border-blue-800 text-sm">
+            <input type="checkbox" name="" id="" class="prof h-[25px] w-[25px]" id="checkbox3" />
+            <!-- <div class="prof check">
+            </div> -->
+            <div class="prof opt">
+              <div class="name prof text-blue-950 font-bold" id="profname">
+                Customizable profile
+              </div>
+              <div class="prof desc">Custom theme on your profile</div>
+            </div>
+            <div class="prof price text-blue-950" id="profileprice">
+              +$2/mo
+            </div>
+          </div>
+        </div>
+
+        <!-- step4 -->
+        <div class="step4 hidden">
+          <p class="text-3xl font-bold p-2 text-blue-950 md:p-0 mb-[5px]">
+            Finishing up
+          </p>
+          <p class="text-gray-700 p-2 md:p-0 mb-5">
+            Double-check everything looks OK before confirming.
+          </p>
+          <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+            <div
+              class="flex justify-between items-center border-b border-gray-300 pb-2 mb-2 hover:border-blue-800 text-md">
+              <div>
+                <div class="name text-blue-950 font-bold" id="planName"></div>
+                <div class="price text-gray-500 underline" id="change">
+                  change
+                </div>
+              </div>
+              <div class="price text-blue-950 font-bold" id="planPrice"></div>
+            </div>
+            <div class="planSelected"></div>
+          </div>
+          <div class="mt-5 flex justify-between items-center p-4 rounded-lg text-lg">
+            <div class="name text-gray-500" id="total"></div>
+            <div class="price text-blue-800 font-bold text-xl" id="totalprice"></div>
+          </div>
+        </div>
+
+        <!-- step5 -->
+        <div class="step5 hidden">
+          <div class="flex flex-col items-center justify-center mt-[5px] w-[100%]">
+            <img src="./assets/images/icon-thank-you.svg" alt="img" class="md:pt-[30px] mb-[5px]" />
+            <p class="text-3xl font-bold p-2 text-blue-950 md:p-0 my-[15px]">
+              Thank you!
+            </p>
+            <p class="text-gray-700 p-2 mb-5 md:p-0 text-center">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free
+              toemail us at support@loremgamming.com.
+            </p>
+          </div>
+        </div>
+        <div class="hidden md:flex md:items-start md:absolute md:right-[0px] md:bottom-10 w-[100%]">
+          <div class="name back1 text-gray-500 font-bold ml-3 mt-2 hidden relative">
+            Go Back
+          </div>
+          <button
+            class="nextBtn1 bg-blue-950 w-[100px] py-2 text-white text-md font-bold rounded-[5px] mx-auto block absolute right-5">
+            Next Step
+          </button>
+        </div>
+      </form>
+    </div>
+    <footer class="footer w-full h-[75px] bg-white fixed bottom-0 left-0 py-4 flex flex-row md:hidden">
+      <div class="name back2 text-gray-500 font-bold ml-3 mt-2 hidden">
+        Go Back
+      </div>
+      <button
+        class="nextBtn2 bg-blue-950 w-[100px] py-2 text-white text-md font-bold rounded-[5px] mx-auto block absolute right-5">
+        Next Step
+      </button>
+    </footer>
+  </div>
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>

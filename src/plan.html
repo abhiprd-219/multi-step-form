@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Selection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 min-h-screen flex items-center justify-center p-4">
+<!-- Mobile Section -->
+<div class="bg-blue-100 w-full overflow-hidden sm:flex lg:hidden flex-col h-[100vh] relative">
+    <!-- Sidebar for Mobile -->
+    <div class="text-white mt-0 p-6 flex flex-col gap-8 bg-no-repeat bg-cover bg-center bg-[url('../assets/images/bg-sidebar-mobile.svg')] h-[30vh]">
+      <div class="flex flex-row justify-center items-start gap-6 h-full">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-blue-600 font-semibold">1</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-white">2</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-white">3</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-white">4</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Form Section for Mobile -->
+    <div class="relative -mt-12 mx-auto w-10/12 max-w-4xl bg-white rounded-lg shadow-lg p-8 z-10">
+        <h2 class="text-2xl font-bold text-gray-800">Select your plan</h2>
+      <p class="text-gray-500 mt-2">You have the option of monthly or yearly billing.</p>
+  
+      <!-- Plan Options -->
+      <div class="mt-6 space-y-4">
+      <!-- Mobile View Plan Options -->
+    <div class="plan-card border rounded-lg p-4 text-center cursor-pointer hover:border-blue-600 hover:shadow-lg transition duration-300 ease-in-out" onclick="savePlan(this, 'Arcade', '$9/mo', '$90/yr')">
+      <div class="bg-orange-100 w-12 h-12 mx-auto rounded-full flex items-center justify-center">
+        <span class="text-orange-500 font-bold">🎮</span>
+      </div>
+      <h3 class="mt-4 font-semibold text-lg">Arcade</h3>
+      <p class="text-gray-500 price" data-monthly="$9/mo" data-yearly="$90/yr">$9/mo</p>
+    </div>
+    <div class="plan-card border-2 border-blue-600 rounded-lg p-4 text-center cursor-pointer hover:border-blue-600 hover:shadow-lg transition duration-300 ease-in-out" onclick="savePlan(this, 'Advanced', '$12/mo', '$120/yr')">
+      <div class="bg-pink-100 w-12 h-12 mx-auto rounded-full flex items-center justify-center">
+        <span class="text-pink-500 font-bold">🎥</span>
+      </div>
+      <h3 class="mt-4 font-semibold text-lg">Advanced</h3>
+      <p class="text-gray-500 price" data-monthly="$12/mo" data-yearly="$120/yr">$12/mo</p>
+    </div>
+    <div class="plan-card border rounded-lg p-4 text-center cursor-pointer hover:border-blue-600 hover:shadow-lg transition duration-300 ease-in-out" onclick="savePlan(this, 'Pro', '$15/mo', '$150/yr')">
+      <div class="bg-purple-100 w-12 h-12 mx-auto rounded-full flex items-center justify-center">
+        <span class="text-purple-500 font-bold">🕹️</span>
+      </div>
+      <h3 class="mt-4 font-semibold text-lg">Pro</h3>
+      <p class="text-gray-500 price" data-monthly="$15/mo" data-yearly="$150/yr">$15/mo</p>
+    </div>
+  </div>
+  
+  
+      <!-- Billing Toggle -->
+      <div class="mt-6 flex items-center justify-center gap-4">
+        <span class="text-gray-500">Monthly</span>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input id="billingToggleMobile" type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full peer-checked:bg-blue-600"></div>
+          <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-5"></span>
+        </label>
+        <span class="text-gray-500">Yearly</span>
+      </div>
+    </div>
+  
+    <!-- Navigation Buttons -->
+    <div class=" fixed bottom-0 left-0 right-0  bg-white flex justify-between items-center p-2">
+        
+        <a href="./index.html" class="text-gray-500 font-medium hover:underline">Go Back</a>
+        <a href="./pickOn.html" class="bg-blue-600 text-white py-2 px-6 rounded-md shadow hover:bg-blue-700 focus:ring focus:ring-blue-500">Next Step</a>
+      
+    </div>
+  </div>
+  
+  
+
+  <!-- Desktop Section -->
+<div class="hidden lg:flex bg-white shadow-lg rounded-lg max-w-4xl w-full overflow-hidden flex h-[500px]">
+    <!-- Sidebar for Desktop -->
+    <div class="text-white p-6 flex flex-col gap-8 lg:w-1/4 bg-no-repeat bg-cover bg-center bg-[url('../assets/images/bg-sidebar-desktop.svg')] m-2.5 rounded-lg">
+      <h2 class="text-lg uppercase font-semibold tracking-wide">Steps</h2>
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-white">1</div>
+          <p class="text-sm uppercase font-medium">Your Info</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-blue-600 font-semibold">2</div>
+          <p class="text-sm uppercase font-medium">Select Plan</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-white">3</div>
+          <p class="text-sm uppercase font-medium">Add-ons</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-white">4</div>
+          <p class="text-sm uppercase font-medium">Summary</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Form Section -->
+    <div class="flex-1 flex flex-col p-8">
+      <h2 class="text-2xl font-bold text-gray-800">Select your plan</h2>
+      <p class="text-gray-500 mt-2">You have the option of monthly or yearly billing.</p>
+  
+      <!-- Plan Options -->
+<div class="mt-6 grid grid-cols-3 gap-6">
+    <div class="plan-card border rounded-lg p-4 text-center cursor-pointer hover:border-blue-600 hover:shadow-lg transition duration-300 ease-in-out" onclick="savePlan( 'Arcade', '$9/mo', '$90/yr')">
+      <div class="bg-orange-100 w-12 h-12 mx-auto rounded-full flex items-center justify-center">
+        <span class="text-orange-500 font-bold">🎮</span>
+      </div>
+      <h3 class="mt-4 font-semibold text-lg">Arcade</h3>
+      <p class="text-gray-500 price" data-monthly="$9/mo" data-yearly="$90/yr">$9/mo</p>
+    </div>
+    <div class="plan-card border-2 border-blue-600 rounded-lg p-4 text-center cursor-pointer hover:border-blue-600 hover:shadow-lg transition duration-300 ease-in-out" onclick="savePlan( 'Advanced', '$12/mo', '$120/yr')">
+      <div class="bg-pink-100 w-12 h-12 mx-auto rounded-full flex items-center justify-center">
+        <span class="text-pink-500 font-bold">🎥</span>
+      </div>
+      <h3 class="mt-4 font-semibold text-lg">Advanced</h3>
+      <p class="text-gray-500 price" data-monthly="$12/mo" data-yearly="$120/yr">$12/mo</p>
+    </div>
+    <div class="plan-card border rounded-lg p-4 text-center cursor-pointer hover:border-blue-600 hover:shadow-lg transition duration-300 ease-in-out" onclick="savePlan( 'Pro', '$15/mo', '$150/yr')">
+      <div class="bg-purple-100 w-12 h-12 mx-auto rounded-full flex items-center justify-center">
+        <span class="text-purple-500 font-bold">🕹️</span>
+      </div>
+      <h3 class="mt-4 font-semibold text-lg">Pro</h3>
+      <p class="text-gray-500 price" data-monthly="$15/mo" data-yearly="$150/yr">$15/mo</p>
+    </div>
+  </div>
+  
+  
+      <!-- Billing Toggle for Desktop -->
+      <div class="mt-8 flex items-center justify-center gap-4">
+        <span class="text-gray-500">Monthly</span>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input id="billingToggleDesktop" type="checkbox" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full peer-checked:bg-blue-600"></div>
+          <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-5"></span>
+        </label>
+        <span class="text-gray-500">Yearly</span>
+      </div>
+  
+      <!-- Navigation Buttons -->
+      <div class="mt-auto flex justify-between items-end">
+        <a href="./index.html" class="text-gray-500 font-medium hover:underline">Go Back</a>
+        <a href="./pickOn.html" class="bg-blue-600 text-white py-2 px-6 rounded-md shadow hover:bg-blue-700 focus:ring focus:ring-blue-500">Next Step</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- JavaScript -->
+  <script>
+    // Toggle billing display
+    document.querySelectorAll('.price').forEach(function(price) {
+      price.dataset.originalText = price.textContent; // store initial value
+    });
+
+    document.getElementById('billingToggleMobile').addEventListener('change', function() {
+      toggleBillingDisplay(this.checked, '.price');
+    });
+    document.getElementById('billingToggleDesktop').addEventListener('change', function() {
+      toggleBillingDisplay(this.checked, '.price');
+    });
+
+    function toggleBillingDisplay(isYearly, selector) {
+      document.querySelectorAll(selector).forEach(function(price) {
+        price.textContent = isYearly ? price.dataset.yearly : price.dataset.monthly;
+      });
+    }
+
+    function savePlan(name, monthly, yearly) {
+      console.log(`Selected plan: ${name}, Monthly: ${monthly}, Yearly: ${yearly}`);
+      // Logic for saving the selected plan can be added here.
+    }
+
+    function saveBillingPreference(isYearly) {
+    const billingPreference = isYearly ? 'Yearly' : 'Monthly';
+    localStorage.setItem('billingPreference', billingPreference); // Save to localStorage
+    console.log(`Billing Preference Saved: ${billingPreference}`);
+  }
+
+  // Add event listeners for toggles
+  document.getElementById('billingToggleMobile').addEventListener('change', function () {
+    saveBillingPreference(this.checked);
+  });
+
+  document.getElementById('billingToggleDesktop').addEventListener('change', function () {
+    saveBillingPreference(this.checked);
+  });
+
+  function saveBillingPreference(isYearly) {
+      const billingPreference = isYearly ? 'Yearly' : 'Monthly';
+      localStorage.setItem('billingPreference', billingPreference); // Save to localStorage
+      console.log(`${billingPreference} billing selected`);
+    }
+  
+    // Add event listeners for toggles
+    document.getElementById('billingToggleMobile').addEventListener('change', function () {
+      saveBillingPreference(this.checked);
+    });
+  
+    document.getElementById('billingToggleDesktop').addEventListener('change', function () {
+      saveBillingPreference(this.checked);
+    });
+  
+    // Check and log the saved billing preference (for testing)
+    const savedBillingPreference = localStorage.getItem('billingPreference');
+    if (savedBillingPreference) {
+      console.log(`Saved billing preference: ${savedBillingPreference}`);
+    } else {
+      console.log('No billing preference saved');
+    }
+
+  </script>
+  
+
+</body>
+</html>

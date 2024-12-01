@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pick Add-ons</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 min-h-screen flex items-center justify-center p-4">
+  <!-- Mobile Section -->
+  <div class="bg-blue-100 w-full overflow-hidden sm:flex lg:hidden flex-col h-[100vh] relative">
+    <!-- Sidebar for Mobile -->
+    <div class="text-white mt-0 p-6 flex flex-col gap-8 bg-no-repeat bg-cover bg-center bg-[url('../assets/images/bg-sidebar-mobile.svg')] h-[30vh]">
+      <div class="flex flex-row justify-center items-start gap-6 h-full">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-blue-600 font-semibold">1</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-white">2</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-white">3</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-white">4</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Section for Mobile -->
+    <div class="relative -mt-8 mx-auto w-11/12 max-w-md bg-white rounded-lg shadow-lg p-6 z-10">
+      <h2 class="text-2xl font-bold text-gray-800">Pick add-ons</h2>
+      <p class="text-gray-500 mt-2">Add-ons help enhance your gaming experience.</p>
+
+      <!-- Add-on Options -->
+      <div class="mt-6 space-y-4">
+        <label class="border rounded-lg p-4 flex items-center justify-between cursor-pointer">
+          <div class="flex items-center gap-4">
+            <input type="checkbox" class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+            <div>
+              <p class="font-semibold text-gray-800">Online service</p>
+              <p class="text-gray-500 text-sm">Access to multiplayer games</p>
+            </div>
+          </div>
+          <span class="text-blue-600 font-medium">+$10/yr</span>
+        </label>
+
+        <label class="border rounded-lg p-4 flex items-center justify-between cursor-pointer">
+          <div class="flex items-center gap-4">
+            <input type="checkbox" class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+            <div>
+              <p class="font-semibold text-gray-800">Larger storage</p>
+              <p class="text-gray-500 text-sm">Extra 1TB of cloud save</p>
+            </div>
+          </div>
+          <span class="text-blue-600 font-medium">+$20/yr</span>
+        </label>
+
+        <label class="border rounded-lg p-4 flex items-center justify-between cursor-pointer">
+          <div class="flex items-center gap-4">
+            <input type="checkbox" class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+            <div>
+              <p class="font-semibold text-gray-800">Customizable Profile</p>
+              <p class="text-gray-500 text-sm">Custom theme on your profile</p>
+            </div>
+          </div>
+          <span class="text-blue-600 font-medium">+$20/yr</span>
+        </label>
+      </div>
+    </div>
+ 
+        <div class=" fixed bottom-0 left-0 right-0  bg-white flex justify-between items-center p-2">
+        <a href="./plan.html" class="text-gray-500 font-medium hover:underline">Go Back</a>
+        <a href="./summary.html" class="bg-blue-600 text-white py-2 px-6 rounded-md shadow hover:bg-blue-700 focus:ring focus:ring-blue-500">Next Step</a>
+     
+      </div>
+  </div>
+
+  <!-- Desktop Section -->
+  <div class="bg-white shadow-lg rounded-lg max-w-4xl w-full overflow-hidden hidden lg:flex h-[500px] relative">
+    <!-- Sidebar for Desktop -->
+    <div class="text-white p-6 flex flex-col gap-8 lg:w-1/4 bg-no-repeat bg-cover bg-center bg-[url('../assets/images/bg-sidebar-desktop.svg')] m-2.5 rounded-lg">
+      <h2 class="text-lg uppercase font-semibold tracking-wide">Steps</h2>
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-white">1</div>
+          <p class="text-sm uppercase font-medium">Your Info</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-white">2</div>
+          <p class="text-sm uppercase font-medium">Select Plan</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-blue-600 font-semibold">3</div>
+          <p class="text-sm uppercase font-medium">Add-ons</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-white">4</div>
+          <p class="text-sm uppercase font-medium">Summary</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="flex-1 p-8">
+      <h2 class="text-2xl font-bold text-gray-800">Pick add-ons</h2>
+      <p class="text-gray-500 mt-2">Add-ons help enhance your gaming experience.</p>
+<!-- Add-on Options -->
+<div class="mt-6 space-y-4">
+    <label class="flex items-center justify-between border rounded-lg p-4 cursor-pointer">
+      <div class="flex items-center gap-4">
+        <input type="checkbox" class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+        <div>
+          <p class="font-semibold text-gray-800">Online service</p>
+          <p class="text-gray-500 text-sm">Access to multiplayer games</p>
+        </div>
+      </div>
+      <span class="price" data-price-monthly="+$1/mo" data-price-yearly="+$10/yr">+$10/yr</span>
+    </label>
+  
+    <label class="flex items-center justify-between border rounded-lg p-4 cursor-pointer">
+      <div class="flex items-center gap-4">
+        <input type="checkbox" class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+        <div>
+          <p class="font-semibold text-gray-800">Larger storage</p>
+          <p class="text-gray-500 text-sm">Extra 1TB of cloud save</p>
+        </div>
+      </div>
+      <span class="price" data-price-monthly="+$2/mo" data-price-yearly="+$20/yr">+$20/yr</span>
+    </label>
+  
+    <label class="flex items-center justify-between border rounded-lg p-4 cursor-pointer">
+      <div class="flex items-center gap-4">
+        <input type="checkbox" class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+        <div>
+          <p class="font-semibold text-gray-800">Customizable Profile</p>
+          <p class="text-gray-500 text-sm">Custom theme on your profile</p>
+        </div>
+      </div>
+      <span class="price" data-price-monthly="+$2/mo" data-price-yearly="+$20/yr">+$20/yr</span>
+    </label>
+  </div>
+  
+    
+
+
+  <!-- Navigation Buttons Outside and Fixed to the Bottom -->
+  <div class="mt-8 flex justify-between  items-center">
+    <a href="./plan.html" class="text-gray-500 font-medium hover:underline">Go Back</a>
+    <a href="./summary.html" class="bg-blue-600 text-white py-2 px-6 rounded-md shadow hover:bg-blue-700 focus:ring focus:ring-blue-500">Next Step</a>
+  </div>
+  </div>
+  </div>
+  
+</body>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Select all checkboxes
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const selectedAddOns = JSON.parse(localStorage.getItem('selectedAddOns')) || []; // Retrieve existing data from localStorage or initialize an empty array
+  
+      // Function to update localStorage and log the data
+      function updateLocalStorage() {
+        localStorage.setItem('selectedAddOns', JSON.stringify(selectedAddOns));
+        console.log('Selected Add-Ons:', selectedAddOns); // Log the current selections
+      }
+  
+      // Function to get the price as an integer from the data attribute
+      function getPriceFromElement(element) {
+        const priceText = element.dataset.priceYearly || element.dataset.priceMonthly;
+        const priceMatch = priceText.match(/\d+/); // Extract number from the string (e.g., "$20/yr")
+        return priceMatch ? parseInt(priceMatch[0], 10) : 0;
+      }
+  
+      // Populate the initial state from localStorage
+      checkboxes.forEach(checkbox => {
+        const label = checkbox.closest('label');
+        const name = label.querySelector('p.font-semibold').textContent.trim();
+        const price = getPriceFromElement(label);
+  
+        if (checkbox.checked) {
+          // Ensure that the item is only added if it's not already present in selectedAddOns
+          if (!selectedAddOns.some(item => item.name === name)) {
+            selectedAddOns.push({ name, price });
+          }
+        }
+  
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) {
+            // Add to selectedAddOns if checked, ensure it doesn't already exist
+            if (!selectedAddOns.some(item => item.name === name)) {
+              selectedAddOns.push({ name, price });
+            }
+          } else {
+            // Remove from selectedAddOns if unchecked
+            const index = selectedAddOns.findIndex(item => item.name === name);
+            if (index !== -1) {
+              selectedAddOns.splice(index, 1);
+            }
+          }
+  
+          updateLocalStorage(); // Update localStorage after each change
+        });
+      });
+  
+      // Initial log of stored data (useful for debugging)
+      console.log('Initial Selected Add-Ons from localStorage:', selectedAddOns);
+    });
+  </script>
+  
+ 
+  
+
+</html>
